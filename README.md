@@ -90,12 +90,12 @@ const response = await fetch(
 skyscope-weather-dashboard/
 ├── public/
 │   ├── index.html
-│   └── favicon.ico
 ├── src/
 │   ├── components/
 │   │   └── WeatherDashboard.js
 │   ├── App.js
 │   ├── App.css
+│   ├── index.css
 │   └── index.js
 ├── package.json
 ├── tailwind.config.js
