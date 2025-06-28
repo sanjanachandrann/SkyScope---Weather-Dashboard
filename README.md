@@ -143,9 +143,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-Your Name - [@yourusername](https://twitter.com/yourusername) - your.email@example.com
+Your Name - Sanjana C K 23202041@rmd.ac.in
 
-Project Link: [https://github.com/yourusername/skyscope-weather-dashboard](https://github.com/yourusername/skyscope-weather-dashboard)
+Project Link: [[https://github.com/yourusername/skyscope-weather-dashboard](https://github.com/sanjanachandrann/SentimentScope-Advanced-NLP-Sentiment-Analysis)](https://github.com/yourusername/skyscope-weather-dashboard)
 
 ## 🙏 Acknowledgments
 
