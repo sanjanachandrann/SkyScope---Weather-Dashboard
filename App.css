@@ -1,0 +1,418 @@
+/* ================================
+   SkyScope Weather Dashboard Styles
+   ================================ */
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* ================================
+   Global Animations
+   ================================ */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 53%, 80%, 100% {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 0, 0);
+  }
+  40%, 43% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -10px, 0);
+  }
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -5px, 0);
+  }
+  90% {
+    transform: translate3d(0, -2px, 0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+/* ================================
+   Animation Classes
+   ================================ */
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideInUp 0.5s ease-out forwards;
+}
+
+.animate-slide-left {
+  animation: slideInLeft 0.5s ease-out forwards;
+}
+
+.animate-slide-right {
+  animation: slideInRight 0.5s ease-out forwards;
+}
+
+.animate-bounce-slow {
+  animation: bounce 2s infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  background-size: 200px 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* ================================
+   Glassmorphism Effects
+   ================================ */
+
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.glass-strong {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.glass-subtle {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* ================================
+   Weather Card Hover Effects
+   ================================ */
+
+.weather-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.weather-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.weather-card:active {
+  transform: translateY(-4px) scale(1.01);
+}
+
+/* ================================
+   Interactive Elements
+   ================================ */
+
+.interactive-element {
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.interactive-element:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.interactive-element:active {
+  transform: scale(0.98);
+}
+
+/* ================================
+   Input Field Enhancements
+   ================================ */
+
+.weather-input {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.weather-input:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  transform: scale(1.02);
+}
+
+.weather-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease;
+}
+
+.weather-input:focus::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ================================
+   Button Styles
+   ================================ */
+
+.weather-button {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.weather-button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s;
+}
+
+.weather-button:hover:before {
+  left: 100%;
+}
+
+.weather-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.weather-button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.weather-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* ================================
+   Loading States
+   ================================ */
+
+.loading-skeleton {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 25%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.1) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+  border-radius: 12px;
+}
+
+.loading-dots::after {
+  content: '';
+  display: inline-block;
+  animation: loading-dots 1.5s infinite;
+}
+
+@keyframes loading-dots {
+  0%, 20% {
+    content: '.';
+  }
+  40% {
+    content: '..';
+  }
+  60%, 100% {
+    content: '...';
+  }
+}
+
+/* ================================
+   Responsive Design Helpers
+   ================================ */
+
+@media (max-width: 768px) {
+  .weather-card:hover {
+    transform: none;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+  
+  .interactive-element:hover {
+    transform: none;
+  }
+  
+  .weather-input:focus {
+    transform: none;
+  }
+  
+  .weather-button:hover {
+    transform: none;
+  }
+}
+
+/* ================================
+   Accessibility Improvements
+   ================================ */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.focus-visible:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.8);
+  outline-offset: 2px;
+}
+
+/* ================================
+   Print Styles
+   ================================ */
+
+@media print {
+  .App {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .glass, .glass-strong, .glass-subtle {
+    background: white !important;
+    border: 1px solid #ccc !important;
+  }
+  
+  .weather-card {
+    box-shadow: none !important;
+    border: 1px solid #ddd !important;
+  }
+}
+
+/* ================================
+   Dark Mode Support
+   ================================ */
+
+@media (prefers-color-scheme: dark) {
+  .glass {
+    background: rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* ================================
+   High Contrast Mode
+   ================================ */
+
+@media (prefers-contrast: high) {
+  .glass {
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+  }
+  
+  .weather-input {
+    background: white;
+    color: black;
+    border-color: black;
+  }
+}
+
+/* ================================
+   Reduced Motion Support
+   ================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in,
+  .animate-slide-up,
+  .animate-slide-left,
+  .animate-slide-right,
+  .animate-bounce-slow,
+  .animate-pulse-slow,
+  .animate-shimmer {
+    animation: none !important;
+  }
+  
+  .weather-card,
+  .interactive-element,
+  .weather-input,
+  .weather-button {
+    transition: none !important;
+  }
+  
+  .weather-card:hover,
+  .interactive-element:hover,
+  .weather-input:focus,
+  .weather-button:hover {
+    transform: none !important;
+  }
+}
