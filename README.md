@@ -143,10 +143,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-Your Name - [@yourusername](https://twitter.com/yourusername) - your.email@example.com
+Sanjana C K - 23202041@rmd.ac.in
 
-Project Link: [https://github.com/yourusername/skyscope-weather-dashboard](https://github.com/yourusername/skyscope-weather-dashboard)
-
+Project Link: https://github.com/sanjanachandrann/SkyScope---Weather-Dashboard
 ## 🙏 Acknowledgments
 
 - [OpenWeatherMap](https://openweathermap.org/) for the weather API
