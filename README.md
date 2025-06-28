@@ -3,7 +3,7 @@
 
 A modern, responsive weather dashboard built with React that fetches and displays real-time weather data and 5-day forecasts with beautiful UI animations.
 
-![SkyScope Demo](https://via.placeholder.com/800x400/4F46E5/FFFFFF?text=SkyScope+Weather+Dashboard)
+
 
 ## ✨ Features
 
@@ -16,9 +16,6 @@ A modern, responsive weather dashboard built with React that fetches and display
 - ⚡ **Fast Performance** - Optimized React components
 - 🌈 **Beautiful Gradients** - Eye-catching color schemes
 
-## 🚀 Live Demo
-
-[View Live Demo](https://your-demo-link.com)
 
 ## 🛠️ Technologies Used
 
@@ -137,9 +134,6 @@ The main component that handles:
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 📞 Contact
 
