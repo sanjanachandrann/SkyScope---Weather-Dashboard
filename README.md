@@ -145,7 +145,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
  Sanjana C K - 23202041@rmd.ac.in
 
-Project Link: [[[https://github.com/yourusername/skyscope-weather-dashboard](https://github.com/sanjanachandrann/SkyScope---Weather-Dashboard)](https://github.com/sanjanachandrann/SkyScope---Weather-Dashboard)](https://github.com/yourusername/skyscope-weather-dashboard)
+Project Link: https://github.com/sanjanachandrann/SkyScope---Weather-Dashboard
 
 ## 🙏 Acknowledgments
 
